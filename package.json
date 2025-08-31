@@ -3,7 +3,7 @@
 	"version": "1.0.0",
 	"main": "index.js",
 	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1"
+		"build": "esbuild src/index.ts --bundle --outfile=dist/index.js"
 	},
 	"description": "Utilities for working with pitch in arbitrary equal temperament spaces",
 	"keywords": [
@@ -13,5 +13,17 @@
 	],
 	"author": "Matt Chamberlain",
 	"license": "MIT",
-	"packageManager": "pnpm@10.4.1"
+	"packageManager": "pnpm@10.4.1",
+	"devDependencies": {
+		"esbuild": "0.25.9",
+		"typescript": "^5.9.2"
+	},
+	"pnpm": {
+		"ignoredBuiltDependencies": [
+			"esbuild"
+		],
+		"onlyBuiltDependencies": [
+			"esbuild"
+		]
+	}
 }
