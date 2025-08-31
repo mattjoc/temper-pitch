@@ -21,7 +21,7 @@ jobs:
       - name: Install pnpm
         uses: pnpm/action-setup@v4
         with:
-          run-install: false
+          run_install: false
           # Use pnpm version from packageManager field in package.json
 
       - name: Install Node.js
