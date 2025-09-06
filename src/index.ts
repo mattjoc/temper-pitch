@@ -1,1 +1,6 @@
-export { add } from './utils'
+export * from './interval'
+export * from './intervalClass'
+export * from './intervals'
+export * from './normalOrder'
+export * from './pitchClass'
+export * from './types'
