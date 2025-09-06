@@ -1,6 +1,6 @@
-import { findMostLeftCompactRotation } from '@/findMostLeftCompactRotation/findMostLeftCompactRotation'
 import { pitchClass } from '@/pitchClass'
 import type { Pitch, PitchClass } from '@/types'
+import { findMostLeftCompactRotation } from '@/utils/findMostLeftCompactRotation'
 import { rotateArray } from '@/utils/rotateArray'
 
 /**
