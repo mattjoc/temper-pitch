@@ -1,0 +1,1 @@
+export const EQUAL_DIVISIONS_OF_THE_OCTAVE = 12

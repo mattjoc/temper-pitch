@@ -1,0 +1,1 @@
+export { pitchClass } from './pitchClass'
