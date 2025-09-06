@@ -1,35 +1,36 @@
 {
-	"name": "@temper.sh/pitch",
-	"version": "1.0.1",
-	"main": "index.js",
-	"scripts": {
-		"dev": "vitest",
-		"build": "esbuild src/index.ts --bundle --outfile=dist/index.js",
-		"format-and-lint": "biome check --write",
-		"test": "vitest run",
-		"prepublishOnly": "pnpm run ship",
-		"ship": "pnpm run test && pnpm run format-and-lint &&pnpm run build",
-		"local-release": "changeset version && changeset publish"
-	},
-	"description": "Utilities for working with pitch in arbitrary equal temperament spaces",
-	"keywords": [
-		"music",
-		"pitch",
-		"temperament"
-	],
-	"author": "Matt Chamberlain",
-	"license": "MIT",
-	"packageManager": "pnpm@10.4.1",
-	"devDependencies": {
-		"@biomejs/biome": "2.2.2",
-		"@changesets/cli": "^2.29.6",
-		"esbuild": "0.25.9",
-		"typescript": "^5.9.2",
-		"vitest": "^3.2.4"
-	},
-	"pnpm": {
-		"onlyBuiltDependencies": [
-			"esbuild"
-		]
-	}
+  "name": "@temper.sh/pitch",
+  "version": "1.0.1",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vitest --reporter=verbose",
+    "build": "esbuild src/index.ts --bundle --outfile=dist/index.js",
+    "format-and-lint": "biome check --write",
+    "test": "vitest run",
+    "prepublishOnly": "pnpm run ship",
+    "ship": "pnpm run test && pnpm run format-and-lint &&pnpm run build",
+    "local-release": "changeset version && changeset publish"
+  },
+  "description": "Utilities for working with pitch in arbitrary equal temperament spaces",
+  "keywords": [
+    "music",
+    "pitch",
+    "temperament"
+  ],
+  "author": "Matt Chamberlain",
+  "license": "MIT",
+  "packageManager": "pnpm@10.4.1",
+  "devDependencies": {
+    "@biomejs/biome": "2.2.2",
+    "@changesets/cli": "^2.29.6",
+    "esbuild": "0.25.9",
+    "typescript": "^5.9.2",
+    "vite-tsconfig-paths": "^5.1.4",
+    "vitest": "^3.2.4"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild"
+    ]
+  }
 }
