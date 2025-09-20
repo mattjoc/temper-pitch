@@ -1,3 +1,4 @@
+import { interval } from '@/interval'
 import type { Chord, Interval } from '@/types'
 
 export const intervals = (chord: Chord): Array<Interval> => {
@@ -8,7 +9,7 @@ export const intervals = (chord: Chord): Array<Interval> => {
   const intervals: Array<Interval> = []
 
   for (let i = 0; i < chord.length - 1; i++) {
-    intervals.push(chord[i + 1]! - chord[i]!)
+    intervals.push(interval(chord[i]!, chord[i + 1]!))
   }
 
   return intervals
