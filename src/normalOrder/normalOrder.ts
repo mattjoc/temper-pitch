@@ -1,7 +1,7 @@
 import { pitchClass } from '@/pitchClass'
 import type { Pitch, PitchClass } from '@/types'
 import { findMostLeftCompactRotation } from '@/utils/findMostLeftCompactRotation'
-import { rotateArray } from '@/utils/rotateArray'
+import { rotateArray } from '@/utils/roateArray'
 
 /**
  * Returns the normal order of a chord according to music theory principles.
@@ -16,17 +16,17 @@ import { rotateArray } from '@/utils/rotateArray'
  *    - Continue until tie is broken or all comparisons are equal
  *    - If all comparisons are equal, choose the rotation with the smallest first pitch class
  *
- * @param pitches Array of pitch numbers
+ * @param chord Array of pitch numbers
  * @returns Array representing the normal order of the chord
  */
-export const normalOrder = (pitches: Array<Pitch>): Array<PitchClass> => {
-  if (!pitches.length) {
+export const normalOrder = (chord: Array<Pitch>): Array<PitchClass> => {
+  if (!chord.length) {
     return []
   }
 
-  // Convert pitches to pitch classes, dedupe, and sort ascending
+  // Convert chord to pitch classes, dedupe, and sort ascending
   const pitchClasses = Array.from(
-    new Set(pitches.map((pitch) => pitchClass(pitch))),
+    new Set(chord.map((pitch) => pitchClass(pitch))),
   ).sort((a, b) => a - b)
 
   // Handle single pitch class case
