@@ -1,6 +1,6 @@
 # @temper.sh/pitch
 
-A TypeScript library for working with pitch, intervals, and pitch collections in arbitrary equal temperament systems. Designed for music theory analysis and composition tools.
+A TypeScript library for working with pitch, intervals, and pitch collections in arbitrary equal temperament systems.
 
 ## Installation
 
@@ -23,7 +23,7 @@ type Pitch = number           // MIDI pitch (60 = middle C)
 type PitchClass = number      // Pitch class (0-11 in 12-TET)
 type Chord = Array<Pitch>     // Array of pitches
 type Interval = number        // Semitone difference between pitches
-type IntervalClass = number   // Smallest interval between pitch classes
+type IntervalClass = number   // Smallest interval between given pitch classes
 ```
 
 ## API Reference
@@ -108,7 +108,3 @@ pnpm build
 # Format and lint
 pnpm format-and-lint
 ```
-
-## License
-
-MIT © Matt Chamberlain
