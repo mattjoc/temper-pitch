@@ -5,7 +5,7 @@ A TypeScript library for working with pitch, intervals, and pitch collections in
 ## Installation
 
 ```bash
-npm install @temper.sh/pitch
+pnpm add @temper.sh/pitch
 ```
 
 ## Features
